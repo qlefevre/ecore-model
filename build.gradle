@@ -12,12 +12,12 @@ buildscript {
 version "1.0"
 group "ecore.model"
 
-apply plugin:"eclipse"
-apply plugin:"idea"
-apply plugin:"org.grails.grails-plugin"
-apply plugin:"org.grails.grails-plugin-publish"
-apply plugin:"org.grails.grails-gsp"
-apply plugin:"asset-pipeline"
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "org.grails.grails-plugin"
+apply plugin: "org.grails.grails-plugin-publish"
+apply plugin: "org.grails.grails-gsp"
+apply plugin: "asset-pipeline"
 
 repositories {
     mavenLocal()
@@ -59,15 +59,17 @@ grailsPublish {
     // TODO: Provide values here
     user = 'user'
     key = 'key'
+	repo = 'grails-plugins'
     githubSlug = 'foo/bar'
     license {
         name = 'Apache-2.0'
     }
-    title = "My Plugin"
-    desc = "Full plugin description"
-    developers = [johndoe:"John Doe"]
+    title = "ecore model"
+    desc = "Ecore Model is based on the Eclipse Modeling Framework (EMF).\n" +
+            "The command 'generate-domain-class' generates domain classes from EMF Ecore model."
+    developers = [qlefevre: "Quentin Lefèvre"]
     portalUser = ""
-    portalPassword = ""    
+    portalPassword = ""
 }
 
 
